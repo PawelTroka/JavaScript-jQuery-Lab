@@ -1,0 +1,113 @@
+<html>
+<head>
+    <style>
+        .ocena {
+            cursor: pointer;
+            color: blue;
+        }
+    </style>
+    <script src="jquery/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+    <h1>
+        RAI - Laboratorium z JavaScript/JQUERY
+    </h1>
+    <h3>Narzedzia i biblioteki</h3>
+    <ul>
+        <li>Framework testowy <a href="http://qunitjs.com/">QUnit</a> lub <a href="http://jasmine.github.io/">jasmine </a></li>
+        <li><a href="http://jquery.com/">JQuery</a>, <a href="http://jqueryui.com">JQuery UI</a>, <a href="http://getbootstrap.com/">Bootstrap</a></li>
+        <li>do pisania mozna uzywac dowolnego edytora - warte uwagi sa np <a href="http://notepad-plus-plus.org/">NotePad++</a> lub edytor wbudowany w VS</li>
+        <li>przydatne moze byc uzycie FireBug-a/Chrome developer tools</li>
+        <li>do hostowania zadania dotyczacego wolan ajaxowych w JQuery mozna uzyc dowonej technologii - dostarczony przyklad opiera sie na <a href="http://nodejs.org">nodejs</a></li>
+        <li>do testowania selektorow JQuery mozna uzyc on-lineowego <a href="http://www.w3schools.com/jquery/trysel.asp?filename=trysel_basic&jqsel=p.intro,%23choose">testera1</a> lub <a href="http://sk.kapsi.fi/interactive-jquery-tester.html">testera2</a> </li>
+    </ul>
+
+    <h2>Zadania:</h2>
+    <h3>I.Mechanizmy Javascript</h3>
+    <ul>
+        <li>Zadania dotyczace JavaScriptu w miare mozliwosci prosze zrealizowac w formie testów jednostkowych (QUnit/Jasmine)</li>
+        <li>Definicje klas itd. powinny byc zawarte w oddzielnych plikach, najlepiej z wykorzystaniem samouruchamiajacych sie funkcji anonimowych</li>
+        <li>Po rozpakowaniu framework-a QUnit/Jasmine i uruchomieniu test runner-a prosze zapoznac sie ze skladnia testow a nastepnie zrealizowac ponizsze</li>
+    </ul>
+    <ol>
+        <li>
+            <h4>Przetestowac emulacje zmiennych prywatnych.</h4>
+            <p>Prosze zdefiniowac konstruktor "Task" z atrybutami nazwa,poczatek,dlugosc + funkcje wyswitlajaca opis zadania i druga pozwalajaca sprawdzic czy dla danego dnia zadanie jeszcze trwa. </p>
+            <p>Obiekt prosze zrealizowac z  wykorzystaniem mechanizmu domkniecia.</p>
+            <p>Testy powinny weryfikowac czy funkcje dzialaja poprawnie i proba odczytania nazwy i innych atrybutów z obiektu nie jest mozliwa</p>
+        </li>
+
+        <li>
+            <h4>Przetestowac mechanizm prototypow.</h4>
+            <p>Prosze zdefiniowac konstruktor "Task" podobnie jak wczesniej ale umieszcajacc funcje w prototypie konstruktora. </p>
+            <p>Testy powinny weryfikowac czy funkcje dzialaja poprawnie</p>
+        </li>
+
+        <li>
+            <h4>Przetestowac emulacje mechanizm dziedziczenia.</h4>
+            <p>Prosze zdefiniowac konstruktor "Koszt" wywiedziony z konstruktora Task. Nowy obiekt powinien miec zmieniona implementacje funcji drukujacej opis.</p>
+            <p>Nowy obiekt powinien wykorzystywac mechanizm emulacji dziedziczenia z wykorzystaniem prototypow, tj. prototyp "Kosztu" stanowi obiekt utworzony przez "new Task" i w ym obiekcie zostaja otworzone .</p>
+            <p>Testy powinny weryfikowac czy funkcje w obiektach task dzialaja w zmieniony sposob i czy sa dostepna "odziedziczona" zawartosc.</p>
+        </li>
+
+    </ol>
+    <h3>II.Selekcja i modyfikacja elementów przez JQuery.</h3>
+    <ul>
+        <li>Przydatna moze byc <a href="http://learn.jquery.com">dokumentacja</a> do JQurey.</li>
+        <li>
+            Prosze potraktowac niniejszy plik jako przykladowy plik. Po zapisaniu na dysku prosze dodac link do jquery (linkowanego lokalnie lub z wykorzystaniem CDN <code>http://ajax.googleapis.com/ajax/libs/jquery/latest/jquery.js</code>
+            i dodac nastepujaca funkcjonalnosc (w miare mozliwosci dla potrzeb tego zadania prosze uzyc istniejacej struktury, bez dodawania identyfikatorow itd).
+        </li>
+        <li>Tam gdzie mowa o zmianie wygladu - wyglad powinien byc zdefiniowany przez styl. Style najlepiej umiescic w oddzielnym pliku lub ew. w sekcji head</li>
+    </ul>
+    <ol>
+        <li>Prosze programowo dodac jakas animacje uruchamiana po zaladowaniu strony</li>
+        <li>Prosze programowo zaaplikowac zmiane wygladu odsylaczy, ale tylko w obrebie list</li>
+        <li>Prosze programow zaaplikowac zmiane wygladu sekcji h2/h3/h4</li>
+        <li>Prosze programowo zaaplikowac zmiane wygladu  parzystych/nieoparzystych lini w niniejszym wyliczeniu</li>
+        <li>Prosze programowo dodac zwijanie i rozwijanie (po kliknieciu w naglowek h3) tresci poszczegolnych zadan </li>
+        <li>Prosze programowo pogrubic slowo "Prosze" w ninejszym wyliczeniu</li>
+        <li>Dla zwinietych zadan prosze zapewnic wyswietlanie tooltipa po najechaniu myszka z trescia kliknij zeby rozwinac</li>
+        <li>Do tooltipa z poprzedniego punktu prosze dodac tresc zadania ew. jej poczatek(w momencie pokazywania tooltipa tresc jest oczywiscie ukryta)</li>
+    </ol>
+
+    <h3>III.Uzycie plug-inow JQuery UI</h3>
+    <p>Dla potrzeb  zadania nalezy wykorzystac tresc xzawarta na niniejszej stronie (mozna równiez uzyc wersji po zaaplikowaniu bootstrap-a).</p>
+    <ol>
+        <li>Prosze uzyc pluginu <a href="http://jqueryui.com/accordion/">accordion</a> do organizacji zadan na niniejszej stronie </li>
+        <li>Prosze uzyc pluginu <a href="http://jqueryui.com/tabs/">tab</a> do organizacji zadan na niniejszej stronie </li>
+        <li>Prosze uzyc pluginu <a href="http://jqueryui.com/menu/">menu</a> do organizacji zadan na niniejszej stronie </li>
+    </ol>
+
+    <h3>IV.Uzycie ajax-a</h3>
+    <p>Jako serwera dla potrzeb tego zadania mozna uzyc dowolnej platformy. Proste rozwiazanie moze stanowic nodejs.</p>
+    <ul>
+        <li>Aby uzyc tego podejscia nlezy sciagnac pakiet z <a href="http://nodejs.org/download/">nodejs</a>.</li>
+        <li>Definicja b. prostego przykladowego serwera (program w javascript, ktory zapewni podstawowa funkcjonalnosc: <a href="lab1server.js">lab1server.js</a>. Mozna ja uruchomic przez node lab1server.js.</li>
+        <li>Serwer dziala na localhost:8888, pliki html/js sa serwowane z wskazanego katalogu (FileDirectory) + prosty serwis restowy woloany przez GET localhost:8888/ocena lub PUT localhost:8888/ocena/x gdzie x =1|2|3|4|5. Dla uproszczenia czesci serwerowej serwis restowy zwraca wyniki jako tekst (a nie json). </li>
+        <li>Konieczne moze byc doinstalowanie pakietow "path", "html", "fs". Mozna to zrobic poleceniemi <code>NPM install path</code>, <code>NPM install html</code>, <code>NPM install fs</code>.</li>
+        <li>Oczywiscie serwer mozna do woli modyfikowac np. w celu uzycia JSON-a itd.</li>
+    </ul>
+    <p>Prosze:</p>
+    <ol>
+        <li>Dodac programowo pod kazdym zadaniem h3 (ponizej tresci) na niniejszej stronie opis "Ocena 1 2 3 4 5" tak by liczby reagowaly na kliniecie.</li>
+        <li>Po klinieciu na jedna z ocen element "Ocena 1 2 3 4 5" powinien byc zastepowany napisem "oceniono na " + wybrana ocena</li>
+        <li>Na dole strony powinien byc prezentowany wynik w formie "Wynik " + usredniona ocena. Na tym etapie nie jest wymagane odwolywanie sie do serwera itd. </li>
+        <li>Umiescic niniejsza strone jak statyczny zasób w serwisie wykonanym w dowolnej technologii. </li>
+        <li>Kod odpowiedzialny za wybor oceny (w poprzednim zadaniu) nalezy zmodyfikowac tak by w momencie wybrania oceny wykonywany byl ajaxowy call do serwera przesylajacy wybrana liczbe na serwer.</li>
+        <li>Wynik prezentowany na dole strony rowniez pobierany powinien byc z serwera albo uaktualniany jako wynik wolania Ajax-owego (do wyboru). </li>
+        <li>Dla uproszczenia rozwiazania nie jest wymagane uwzglednienie ze strone moze byc otwarta wielokrotnie (przez róznych uzytkowników i w roznych przegladarkach). </li>
+    </ol>
+
+    <h3>V.Uzycie Bootstrap-a</h3>
+    <p>Prosze przygotowac nowy layout niniejszej strony (w oddzielnym pliku itd, wolno zmienic strukture itp), (oczywiscie poprzednie zadania z JQ nie musza dzialac na nowej strukturze) z uzyciem <a href="http://getbootstrap.com/"> Bootstrap-a</a></p>
+
+    <script>
+        $(document).ready(
+            function () {
+                $('<p class="ocenianie">Ocena <a class="ocena">1</a> <a class="ocena">2</a> <a class="ocena">3</a> <a class="ocena">4</a> <a class="ocena">5</a></p>').insertBefore('h3:not(:contains("Narzedzia i biblioteki")):not(:contains("I.Mechanizmy Javascript"))');
+                $(document.body).append('<p class="ocenianie">Ocena <a class="ocena">1</a> <a class="ocena">2</a> <a class="ocena">3</a> <a class="ocena">4</a> <a class="ocena">5</a></p>');
+            });
+    </script>
+</body>
+</html>
